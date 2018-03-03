@@ -5,49 +5,160 @@
 </head>
 <body>
 
-<h1 style="color:Tomato;">A disaster has occurred...What do you do now</h1>
-
 <div style="background-color:black;color:white;padding:20px;">
-  <h2>Disaster Relief</h2>
+  <h2>Disaster Relief Information</h2>
   <p>info!!</p>
 </div>
-	<!-- Tab links -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+</head>
+<body>
+
+
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Hurricanes')">Hurricanes</button>
+  <button class="tablinks" onclick="openCity(event, 'Hurricanes')" id="defaultOpen">Hurricanes</button>
   <button class="tablinks" onclick="openCity(event, 'Earthquakes')">Earthquakes</button>
   <button class="tablinks" onclick="openCity(event, 'Monsoons')">Monsoons</button>
   <button class="tablinks" onclick="openCity(event, 'Flooding')">Flooding</button>
 </div>
 
-<!-- Tab content -->
 <div id="Hurricanes" class="tabcontent">
-  <h3>Hurricanes </h3>
-  <h4> 1. Hurricane Maria in the Dominican Republic </h4>
-  <p>Local residents wade through the flooded streets of Arenoso, Dominican Republic, on 24 September 2017 after Hurricane Maria, a major Atlantic hurrican of the 2017 season. </p>
-  <h4>2. Hurricane Irma in the USA and Caribbean</h4>
-  <p>David and Dee Thorne hug near the remains of their home following Hurricane Irma in the Florida Keys on 20 September. Irma, a category five storm, was the most powerful Atlantic storm in a decade and caused widespread destruction across the Caribbean and the southern US.</p> 
-  <h4>3. Hurricane Harvey in the USA</h4>
-  <p>Rescue workers help a woman from her home after Hurricane Harvey caused extreme flooding in Port Arthur, Texas. Harvey, which first hit on 25 August 2017, is the most powerful hurricane to hit Texas in more than 50 years.</p>
+	<h3>Hurricanes</h3>
+	<h4> 1. Hurricane Maria in the Dominican Republic </h4>
+		<p>Local residents wade through the flooded streets of Arenoso, Dominican Republic, on 24 September 2017 after Hurricane Maria, a major Atlantic hurrican of the 2017 season. </p>
+	<h4>2. Hurricane Irma in the USA and Caribbean</h4>
+		<p>David and Dee Thorne hug near the remains of their home following Hurricane Irma in the Florida Keys on 20 September. Irma, a category five storm, was the most powerful Atlantic storm in a decade and caused widespread destruction across the Caribbean and the southern US.</p>
+	<h4>3. Hurricane Harvey in the USA</h4>
+		<p>Rescue workers help a woman from her home after Hurricane Harvey caused extreme flooding in Port Arthur, Texas. Harvey, which first hit on 25 August 2017, is the most powerful hurricane to hit Texas in more than 50 years.</p>
 </div>
 
 <div id="Earthquakes" class="tabcontent">
-  <h3>Earthquakes</h3>
-  <h4>Earthquake in Mexico</h4>
-  <p>A car crushed by rubble is seen outside a collapsed house after a magnitude 7.1 earthquake rocked Mexico on 20 September 2017, killing more than 200 people.</p>
+	<h3>Earthquakes</h3>
+	<h4>Earthquake in Mexico</h4>
+		<p>A car crushed by rubble is seen outside a collapsed house after a magnitude 7.1 earthquake rocked Mexico on 20 September 2017, killing more than 200 people.</p>
 </div>
 
 <div id="Monsoons" class="tabcontent">
-  <h3>Monsoons</h3>
-  <h4>Monsson flooding in Bangladesh</h4>
-  <p>Refugees cross a flooded bridge in the Balukhali Rohingya refugee camp in Bangladesh after monsoon rain caused devastation in parts of India, Bangladesh and Nepal, killing more than 1,200 people this summer. Aid agencies are calling the floods one of the worst regional humanitarian crises in years with more than 40 million people affected. </p>
+	<h3>Monsoons</h3>
+	<h4>Monsoon flooding in Bangladesh</h4>
+		<p>Refugees cross a flooded bridge in the Balukhali Rohingya refugee camp in Bangladesh after monsoon rain caused devastation in parts of India, Bangladesh and Nepal, killing more than 1,200 people this summer. Aid agencies are calling the floods one of the worst regional humanitarian crises in years with more than 40 million people affected. </p>
 </div>
-
 
 <div id="Flooding" class="tabcontent">
-  <h3>Flooding</h3>
-  <h4>1. Mudslide in Columbia </h4>
-  <p>A deadly mudslide killed at least 200 people in Mocoa, Colombia in early April 2017. Two weeks later dozens of hillsides gave way in Manizales, pictured.
-</p>
-  <h4>2. Flooding and landslides in Sierra Leone</h4>
-  <p>Bystanders look on as floodwaters rage past a damaged building in Freetown, Sierra Leone on 14 August 2017. At least 312 people were killed and more than 2,000 left homeless when heavy flooding and landslides hit Sierra Leone’s capital.</p> 
+	<h3>Flooding</h3>
+	<h4>1. Mudslide in Columbia </h4>
+		<p>A deadly mudslide killed at least 200 people in Mocoa, Colombia in early April 2017. Two weeks later dozens of hillsides gave way in Manizales, pictured.</p>
+	<h4>2. Flooding and landslides in Sierra Leone</h4>
+		<p>Bystanders look on as floodwaters rage past a damaged building in Freetown, Sierra Leone on 14 August 2017. At least 312 people were killed and more than 2,000 left homeless when heavy flooding and landslides hit Sierra Leone’s capital.</p> 
 </div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
+
+
+
+
+<!---
+<div class="tab">
+
+  <button class="tablinks" onclick="openCity(event, 'Hurricanes')">Hurricanes</button>
+	<div id="Hurricanes" class="tabcontent">
+	  <h3>Hurricanes </h3>
+	  <h4> 1. Hurricane Maria in the Dominican Republic </h4>
+	  <p>Local residents wade through the flooded streets of Arenoso, Dominican Republic, on 24 September 2017 after Hurricane Maria, a major Atlantic hurrican of the 2017 season. </p>
+	  <h4>2. Hurricane Irma in the USA and Caribbean</h4>
+	  <p>David and Dee Thorne hug near the remains of their home following Hurricane Irma in the Florida Keys on 20 September. Irma, a category five storm, was the most powerful Atlantic storm in a decade and caused widespread destruction across the Caribbean and the southern US.</p>
+	  <h4>3. Hurricane Harvey in the USA</h4>
+	  <p>Rescue workers help a woman from her home after Hurricane Harvey caused extreme flooding in Port Arthur, Texas. Harvey, which first hit on 25 August 2017, is the most powerful hurricane to hit Texas in more than 50 years.</p>
+	</div>
+
+  <button class="tablinks" onclick="openCity(event, 'Earthquakes')">Earthquakes</button>
+	<div id="Earthquakes" class="tabcontent">
+	  <h3>Earthquakes</h3>
+	  <h4>Earthquake in Mexico</h4>
+	  <p>A car crushed by rubble is seen outside a collapsed house after a magnitude 7.1 earthquake rocked Mexico on 20 September 2017, killing more than 200 people.</p>
+	</div>
+
+  <button class="tablinks" onclick="openCity(event, 'Monsoons')">Monsoons</button>
+	<div id="Monsoons" class="tabcontent">
+	  <h3>Monsoons</h3>
+	  <h4>Monsson flooding in Bangladesh</h4>
+	  <p>Refugees cross a flooded bridge in the Balukhali Rohingya refugee camp in Bangladesh after monsoon rain caused devastation in parts of India, Bangladesh and Nepal, killing more than 1,200 people this summer. Aid agencies are calling the floods one of the worst regional humanitarian crises in years with more than 40 million people affected. </p>
+	</div>
+
+  <button class="tablinks" onclick="openCity(event, 'Flooding')">Flooding</button>
+	<div id="Flooding" class="tabcontent">
+	  <h3>Flooding</h3>
+	  <h4>1. Mudslide in Columbia </h4>
+	  <p>A deadly mudslide killed at least 200 people in Mocoa, Colombia in early April 2017. Two weeks later dozens of hillsides gave way in Manizales, pictured.</p>
+	  <h4>2. Flooding and landslides in Sierra Leone</h4>
+	  <p>Bystanders look on as floodwaters rage past a damaged building in Freetown, Sierra Leone on 14 August 2017. At least 312 people were killed and more than 2,000 left homeless when heavy flooding and landslides hit Sierra Leone’s capital.</p> 
+	</div>
+</div>
+
+
+->
+
+
